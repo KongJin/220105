@@ -113,15 +113,13 @@ const Join = () => {
 
   const [password, setPassword] = useState("");
 
-  const [age, setAge] = useState("");
-
   const postJoin = async (e) => {
     e.preventDefault();
     const user = await axios.post("https://practice0105.herokuapp.com/user/join", {
       userId,
       password,
     });
-    console.log(user);
+
     // nav("/");
     // window.location.reload();
   };
@@ -148,15 +146,9 @@ const Join = () => {
         <CheckPass>비밀번호 확인</CheckPass>
         <CheckPassInput />
         <Name>이름</Name>
-        <NameInput onChange={(e) => setName(e.target.value)} />
+        <NameInput />
         <Birth>생년월일</Birth>
-        <BirthInput
-          type="date"
-          onChange={(e) => {
-            console.log(age);
-            return setAge(e.target.value);
-          }}
-        />
+        <BirthInput type="date" />
         <Blank></Blank>
         <JoinButton>회원가입</JoinButton>
       </Container>
