@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import styled from "styled-components";
 
 const Form = styled.form`
@@ -64,12 +64,6 @@ const IdButton = styled.button`
   grid-area: idButton;
 `;
 
-const NickName = styled.span`
-  grid-area: nickName;
-`;
-const NickNameInput = styled.input`
-  grid-area: nickNameInput;
-`;
 const NickNameButton = styled.button`
   grid-area: nickNameButton;
 `;
@@ -115,13 +109,10 @@ const Join = () => {
 
   const postJoin = async (e) => {
     e.preventDefault();
-    const user = await axios.post("https://practice0105.herokuapp.com/user/join", {
+    await axios.post("https://practice0105.herokuapp.com/user/join", {
       userId,
       password,
     });
-
-    // nav("/");
-    // window.location.reload();
   };
   return (
     <Form onSubmit={postJoin}>
