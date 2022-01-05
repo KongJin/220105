@@ -56,7 +56,7 @@ const Input = styled.input`
 `;
 
 const Profile = () => {
-  const [check, setCheck] = useState(true);
+  const check = true;
   return (
     <Container>
       <Column>
@@ -70,7 +70,7 @@ const Profile = () => {
             <Content>이름</Content>
           </>
         ) : (
-          <Input placeholder='이름' />
+          <Input placeholder="이름" />
         )}
       </Column>
       <Column>
@@ -80,7 +80,7 @@ const Profile = () => {
             <Content>닉네임</Content>
           </>
         ) : (
-          <Input placeholder='닉네임' />
+          <Input placeholder="닉네임" />
         )}
       </Column>
       <Column>
@@ -90,12 +90,12 @@ const Profile = () => {
             <Content>나이</Content>
           </>
         ) : (
-          <Input placeholder='나이' />
+          <Input placeholder="나이" />
         )}
       </Column>
 
-      <Button to='/profile'>수정</Button>
-      <Button to='/'>탈퇴</Button>
+      <Button to="/profile">수정</Button>
+      <Button to="/">탈퇴</Button>
     </Container>
   );
 };

@@ -110,12 +110,10 @@ const JoinButton = styled.button`
 
 const Join = () => {
   const [userId, setUserId] = useState("");
-  const [nickName, setNickName] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
 
-  const nav = useNavigate();
+  const [password, setPassword] = useState("");
+
+  const [age, setAge] = useState("");
 
   const postJoin = async (e) => {
     e.preventDefault();
